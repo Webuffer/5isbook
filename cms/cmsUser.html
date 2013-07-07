@@ -1,0 +1,204 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>我爱搜书 - 用户模块</title>
+	<link href="../css/bootstrap.css" type="text/css" rel="stylesheet">
+	<link href="../css/cms.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+	<div class="header">
+		<div>
+			<img src="../images/cms-logo.png" alt="cms-logo" class="cms-logo">
+			<div class="login-out">
+	             			<a href="#">退出</a>
+	             		</div>
+		</div>
+		<div class="cms-nav">
+			<ul>
+				<li>
+					<a href="cmsOrder.html">订单管理</a>
+				</li>
+				<li>
+					<a href="cmsGoods.html">商品管理</a>
+				</li>
+				<li>
+					<a href="cmsUser.html">会员管理</a>
+				</li>
+				<li>
+					<a href="cmsCurrentUser.html">我的账号</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="container">
+		<ul class="nav nav-tabs">
+			<li>
+				<a href="#super-admin" data-toggle="tab">超级管理员</a>
+			</li>
+			<li class="active">
+				<a href="#admin" data-toggle="tab">管理员</a>
+			</li>
+			<li>
+				<a href="#normal-user" data-toggle="tab">普通用户</a>
+			</li>
+		</ul>
+		<div class="tab-content">
+			<!-- 超级管理员 -->
+			<div class="tab-pane" id="super-admin">
+				<div class="super-admin">
+					<h1 class="title-bar">【系统的超级管理员】</h1>
+					<table class="account-table">
+						<tr>
+							<th>序号</th>
+							<th>超级管理员账号</th>						
+							<th>当前状态</th>
+							<th>登录信息</th>
+							<th>个人信息</th>
+							<th>操作账号</th>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>201023040958</td>
+							<td>已激活</td>
+							<td>
+								<a href="cmsLoginInfo.html" class="btn btn-small btn-info">点击查看</a>
+							</td>
+							<td>
+								<a href="cmsAdminSelfInfo.html" class="btn btn-small btn-info">点击查看</a>
+							</td>
+							<td>
+								<a href="#" class="btn btn-small btn-inverse">关闭账号</a>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="tab-pane active" id="admin">
+				<div class="add-admin">
+					<a href="cmsAddAdmin.html" class="btn btn-success">新增一个管理员</a>
+				</div>
+				<!-- 因为考虑到系统管理员不会太多，这里不提供分页，在普通用户那块有分页 -->
+				<div class="all-admin">
+					<h1 class="title-bar">【系统所有管理员列表】</h1>
+					<table class="account-table"> 
+						<tr>
+							<th>序号</th>
+							<th>管理员账号</th>						
+							<th>当前状态</th>
+							<th>登录信息</th>
+							<th>个人信息</th>
+							<th>操作账号</th>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>201023040958</td>
+							<td>已激活</td>
+							<td>
+								<a href="cmsLoginInfo.html" class="btn btn-small btn-info">点击查看</a>
+							</td>
+							<td>
+								<a href="cmsAdminSelfInfo.html" class="btn btn-small btn-info">点击查看</a>
+							</td>
+							<td>
+								<a href="#" class="btn btn-small btn-inverse">关闭账号</a>
+							</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>201023040958</td>
+							<td>已激活</td>
+							<td>
+								<a href="cmsLoginInfo.html" class="btn btn-small btn-info">点击查看</a>
+							</td>
+							<td>
+								<a href="cmsAdminSelfInfo.html" class="btn btn-small btn-info">点击查看</a>
+							</td>
+							<td>
+								<a href="#" class="btn btn-small btn-inverse">关闭账号</a>
+							</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>201023040958</td>
+							<td>已激活</td>
+							<td>
+								<a href="cmsLoginInfo.html" class="btn btn-small btn-info">点击查看</a>
+							</td>
+							<td>
+								<a href="cmsAdminSelfInfo.html" class="btn btn-small btn-info">点击查看</a>
+							</td>
+							<td>
+								<a href="#" class="btn btn-small btn-inverse">关闭账号</a>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<!-- 普通用户 -->
+			<div class="tab-pane" id="normal-user">
+				<div class="normal-user">
+					<h1 class="title-bar">【系统普通用户列表】</h1>
+					<!-- 分页条 -->
+					<div class="page-bar">
+						<div class="jump-page">
+							<div class="jump-left">
+								<span title="共5页">共2054页</span>
+							</div>
+							<div  class="jump-right"> 
+								<input type="text" name="jump" size="3" value="5" />
+								<a class="btn" type="button">Go</a>
+							</div>
+						</div>
+						<ul class="cms-pagination">
+							<li><a href="#" class="current-page">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+						</ul>
+					</div>
+					<!-- 清除浮动 -->
+					<div class="clear"></div>
+					<!-- 下面是一页的内容，一个 div 块-->
+					<div class="table-above">
+						<table class="account-table">
+							<tr>
+								<th>序号</th>
+								<th>普通用户账号</th>
+								<th>当前状态</th>
+								<th>登录信息</th>
+								<th>个人信息</th>
+								<th>历史订单</th>
+								<th>操作账号</th>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>201023040958</td>
+								<td>已激活</td>
+								<td>
+									<a href="cmsLoginInfo.html" class="btn btn-small btn-info">点击查看</a>
+								</td>
+								<td>
+									<a href="cmsSelfInfo.html" class="btn btn-small btn-info">点击查看</a>
+								</td>
+								<td>
+									<a href="cmsUserAllOrder.html" class="btn btn-small btn-info">点击查看</a>
+								</td>
+								<td>
+									<a href="#" class="btn btn-small btn-inverse">关闭账号</a>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<p>版权所有 © 2013 BY <a href="#">工作组</a></p>
+	</div>
+	<script src="../js/jquery-1.9.1.min.js" type="text/javascript"></script>
+	<script src="../js/bootstrap.js" type="text/javascript"></script>
+</body>
+</html>

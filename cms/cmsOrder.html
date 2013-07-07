@@ -1,0 +1,305 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>我爱搜书 - 订单管理</title>
+	<link href="../css/bootstrap.css" type="text/css" rel="stylesheet">
+	<link href="../css/cms.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+	<div class="header">
+		<div>
+			<img src="../images/cms-logo.png" alt="cms-logo" class="cms-logo">
+			<div class="login-out">
+	             			<a href="#">退出</a>
+	             		</div>
+		</div>
+		<div class="cms-nav">
+			<ul>
+				<li>
+					<a href="cmsOrder.html">订单管理</a>
+				</li>
+				<li>
+					<a href="cmsGoods.html">商品管理</a>
+				</li>
+				<li>
+					<a href="cmsUser.html">会员管理</a>
+				</li>
+				<li>
+					<a href="cmsCurrentUser.html">我的账号</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="container">
+		<ul class="nav nav-tabs">
+			<li class="active">
+				<a href="#order-type-1" data-toggle="tab">订单状态一</a>
+			</li>
+			<li>
+				<a href="#order-type-2"  data-toggle="tab">订单状态二</a>
+			</li>
+			<li>
+				<a href="#order-type-3"  data-toggle="tab">订单状态三</a>
+			</li>
+			<li>
+				<a href="#order-type-4"  data-toggle="tab">订单状态四</a>
+			</li>
+			<li>
+				<a href="#order-type-5"  data-toggle="tab">订单状态五</a>
+			</li>
+		</ul>
+		<div class="tab-content">
+			<!-- 每一个 tab-pane 放一个状态的订单 -->
+			<div class="tab-pane active" id="order-type-1">
+				<div class="order-area">
+					<div class="current-search">
+						当前订单状态总量：
+						<span>100</span>
+					</div>
+					<!-- 分页条 -->
+					<div class="page-bar">
+						<div class="jump-page">
+							<div class="jump-left">
+								<span title="共5页">共2054页</span>
+							</div>
+							<div  class="jump-right"> 
+								<input type="text" name="jump" size="3" value="5" />
+								<a class="btn" type="button">Go</a>
+							</div>
+						</div>
+						<ul class="cms-pagination">
+							<li><a href="#" class="current-page">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+						</ul>
+					</div>
+					<!-- 清除浮动 -->
+					<div class="clear"></div>
+					<!-- 下面是一页的内容，一个 div 块-->
+					<div class="table-above">
+						<table class="order-table">
+							<tr>
+								<th>标号</th>
+								<th>订单号</th>
+								<th>下单账号</th>
+								<th>下单时间</th>
+								<th>配送详细地址</th>
+								<th>订单详情</th>
+								<th>订单状态</th>
+								<th>取消订单</th>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>123456</td>
+								<td>201020394856</td>
+								<td>2013-05-05</td>
+								<td>华南农业大学华山学生宿舍15栋000号</td>
+								<td>
+									<a href="cmsOrderDetail.html" class="btn btn-small btn-info">查看</a>
+								</td>
+								<td>
+									<a class="btn btn-small btn-warning">更改</a>
+								</td>
+								<td>
+									<a href="#" class="btn btn-small btn-danger">取消</a>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="tab-pane" id="order-type-2">
+				<div class="order-area">
+					<div class="current-search">
+						当前订单状态总量：
+						<span>200</span>
+					</div>
+					<!-- 分页条 -->
+					<div class="page-bar">
+						<div class="jump-page">
+							<div class="jump-left">
+								<span title="共5页">共2054页</span>
+							</div>
+							<div  class="jump-right"> 
+								<input type="text" name="jump" size="3" value="5" />
+								<a class="btn" type="button">Go</a>
+							</div>
+						</div>
+						<ul class="cms-pagination">
+							<li><a href="#" class="current-page">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+						</ul>
+					</div>
+					<!-- 清除浮动 -->
+					<div class="clear"></div>
+					<!-- 下面是一页的内容，一个 div 块-->
+					<div class="table-above">
+						<table class="order-table">
+							<tr>
+								<th>标号</th>
+								<th>订单号</th>
+								<th>下单账号</th>
+								<th>下单时间</th>
+								<th>配送详细地址</th>
+								<th>订单详情</th>
+								<th>订单状态</th>
+								<th>取消订单</th>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>123456</td>
+								<td>201020394856</td>
+								<td>2013-05-05</td>
+								<td>华南农业大学华山学生宿舍15栋000号</td>
+								<td>
+									<a href="cmsOrderDetail.html" class="btn btn-small btn-info">查看</a>
+								</td>
+								<td>
+									<a class="btn btn-small btn-warning">更改</a>
+								</td>
+								<td>
+									<a href="#" class="btn btn-small btn-danger">取消</a>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="tab-pane" id="order-type-3">
+				<div class="order-area">
+					<div class="current-search">
+						当前订单状态总量：
+						<span>300</span>
+					</div>
+					<!-- 分页条 -->
+					<div class="page-bar">
+						<div class="jump-page">
+							<div class="jump-left">
+								<span title="共5页">共2054页</span>
+							</div>
+							<div  class="jump-right"> 
+								<input type="text" name="jump" size="3" value="5" />
+								<a class="btn" type="button">Go</a>
+							</div>
+						</div>
+						<ul class="cms-pagination">
+							<li><a href="#" class="current-page">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+						</ul>
+					</div>
+					<!-- 清除浮动 -->
+					<div class="clear"></div>
+					<!-- 下面是一页的内容，一个 div 块-->
+					<div class="table-above">
+						<table class="order-table">
+							<tr>
+								<th>标号</th>
+								<th>订单号</th>
+								<th>下单账号</th>
+								<th>下单时间</th>
+								<th>配送详细地址</th>
+								<th>订单详情</th>
+								<th>订单状态</th>
+								<th>取消订单</th>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>123456</td>
+								<td>201020394856</td>
+								<td>2013-05-05</td>
+								<td>华南农业大学华山学生宿舍15栋000号</td>
+								<td>
+									<a href="cmsOrderDetail.html" class="btn btn-small btn-info">查看</a>
+								</td>
+								<td>
+									<a class="btn btn-small btn-warning">更改</a>
+								</td>
+								<td>
+									<a href="#" class="btn btn-small btn-danger">取消</a>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="tab-pane" id="order-type-4">
+				<div class="order-area">
+					<div class="current-search">
+						当前订单状态总量：
+						<span>400</span>
+					</div>
+					<!-- 分页条 -->
+					<div class="page-bar">
+						<div class="jump-page">
+							<div class="jump-left">
+								<span title="共5页">共2054页</span>
+							</div>
+							<div  class="jump-right"> 
+								<input type="text" name="jump" size="3" value="5" />
+								<a class="btn" type="button">Go</a>
+							</div>
+						</div>
+						<ul class="cms-pagination">
+							<li><a href="#" class="current-page">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+						</ul>
+					</div>
+					<!-- 清除浮动 -->
+					<div class="clear"></div>
+					<!-- 下面是一页的内容，一个 div 块-->
+					<div class="table-above">
+						<table class="order-table">
+							<tr>
+								<th>标号</th>
+								<th>订单号</th>
+								<th>下单账号</th>
+								<th>下单时间</th>
+								<th>配送详细地址</th>
+								<th>订单详情</th>
+								<th>订单状态</th>
+								<th>取消订单</th>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>123456</td>
+								<td>201020394856</td>
+								<td>2013-05-05</td>
+								<td>华南农业大学华山学生宿舍15栋000号</td>
+								<td>
+									<a href="cmsOrderDetail.html" class="btn btn-small btn-info">查看</a>
+								</td>
+								<td>
+									<a class="btn btn-small btn-warning">更改</a>
+								</td>
+								<td>
+									<a href="#" class="btn btn-small btn-danger">取消</a>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<!-- 每一个 tab-pane 放一个状态的订单 -->
+			<div class="tab-pane" id="order-type-5">
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<p>版权所有 © 2013 BY <a href="#">工作组</a></p>
+	</div>
+	<script src="../js/jquery-1.9.1.min.js" type="text/javascript"></script>
+	<script src="../js/bootstrap.js" type="text/javascript"></script>
+</body>
+</html>
