@@ -1,0 +1,616 @@
+
+/* 
+我爱搜书后台管理 
+	
+文件建立日期：2013年5月26日
+最后修改日期：2013年6月6日
+作者：郑坚鹏（Webuffer）
+
+ */
+
+/* 后台管理界面样式 */
+body{
+	font-size: 15px;
+	margin:0;
+	padding:0;
+	background-color: rgb(240,240,241);
+}
+.header{
+	width:950px;
+	height:100px;
+	border:1px solid #ddd;
+	margin:0 auto;
+	background-color: #fff;
+}
+.cms-logo{
+	margin-top: 5px;
+}
+.login-out{
+	float: right;
+	margin-right: 30px;
+	margin-top: 10px;
+}
+.clear{
+	clear: both;
+}
+/* 模态弹出框样式 */
+.modal-header{
+	text-align: center;
+	font-size: 15px;
+}
+.modal-content{
+	text-align: center;
+	margin-top: 20px;
+}
+.red{
+	color: red;
+}
+/* 登录和注册页面 */
+.login-operation{
+	float: right;
+	margin: 15px 20px 0 0;
+}
+.login-logo{
+	width: 400px;
+	margin-top: 20px;
+}
+.form-horizontal{
+	width: 700px;
+	margin: 60px auto;
+}
+/* 导航条 */
+.cms-nav{
+	width:950px;
+	height:34px;
+	margin-top: 15px;
+}
+.cms-nav ul{
+	list-style-type: none;
+	margin:0;
+}
+.cms-nav ul li{
+	float: left;
+	display: inline;
+}
+.cms-nav ul li a{
+	display: block;
+	width:80px;
+	height:30px;
+	line-height: 30px;
+	border:1px solid;
+	text-align: center;
+	margin-top: 2px;
+	margin-left: 10px;
+	text-decoration: none;
+}
+.cms-nav ul li a:hover{
+	background-color: #628D2B;
+	color: #fff;
+}
+/* 统一分页样式 */
+.cms-pagination{
+	float: right;
+	margin-top: 8px;
+	margin-right: 10px;
+	width: 350px;
+	height: 25px;
+	list-style-type: none;
+}
+.cms-pagination li{
+	float: left;
+	display: inline;
+	margin-top: 4px;
+}
+.cms-pagination li a{
+	margin:4px;
+	padding:2px 7px 2px 7px; 
+	text-decoration:none;
+	color: #333;
+	border:1px solid #ccc;
+}
+.cms-pagination li .current-page{
+	font-weight: bold;
+	margin:4px;
+	padding:4px 7px 2px 7px; 
+	text-decoration:none;
+	background-color:#5FEB3B;
+	color:#fff;
+	cursor: text;	/* 光标指示文本 */
+}
+.page-bar{
+	width: 580px;
+	height: 40px;
+}
+.jump-page{
+	float: left;
+	width: 180px;
+	height: 28px;
+	margin-top: 6px;
+}
+.jump-left{
+	float: left;
+	margin-left: 5px;
+	line-height: 28px;
+}
+.jump-right{
+	float: right;
+	margin-right: 5px;
+}
+.jump-right input{
+	width: 30px;
+	height: 20px;
+	border-right: 0;
+	border-top-right-radius: 0;
+	-moz-border-top-right-radius: 0;
+	-webkit-border-top-right-radius: 0;
+	border-bottom-right-radius:0;
+	-moz-border-bottom-right-radius:0;
+	-webkit-border-bottom-right-radius:0;
+}
+.jump-right .btn{
+	margin-left: -5px;
+	margin-top: -10px;
+	border-top-left-radius: 0;
+	-moz-border-top-left-radius: 0;
+	-webkit-border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	-moz-border-bottom-left-radius: 0;
+	-webkit-border-bottom-left-radius: 0;
+}
+/* 分页条结束 */
+.container{
+	width:950px;
+	height:auto;
+	margin:0 auto;
+	border:1px solid #ddd;
+	margin-top: 10px;
+	padding-bottom: 50px;
+	background-color: #fff;
+}
+.footer{
+	width:950px;
+	height:100px;
+	border:1px solid #ddd;
+	margin:0 auto;
+	margin-top: 10px;
+	text-align: center;
+	background-color: #fff;
+}
+.footer p{
+	margin-top: 15px;
+}
+/* 子导航修正 */
+.nav-tabs{
+	margin-top: 15px;
+}
+.nav-tabs li{
+	margin-left: 10px;
+}
+.nav-tabs .active a{
+	border-radius: 0px;
+	height:20px;
+}
+.nav-tabs a:hover{
+	border-radius: 0px;
+	height: 20px;
+	color:#fff;
+}
+/* 用户管理 */
+.add-admin{
+	width:950px;
+	height: 30px;
+}
+.add-admin a{
+	margin-left: 10px;
+}
+.all-admin, .super-admin, .normal-user, .current-user{
+	margin-left: 10px;
+}
+.title-bar{
+	font-size: 16px;
+}
+td, th{
+	border:1px solid #ddd;
+	text-align: center;
+	height: 35px;
+}
+.table-above{
+	margin-top: 20px;
+}
+/* 新增管理员的表单 */
+.input-list dt{
+	display: block;
+	float: left;
+	width: 120px;
+	text-align: right;
+	line-height: 35px;
+	height: 40px;
+}
+.input-list dd{
+	display: block;
+	float: right;
+	width: 800px;
+	text-align: left;
+	line-height: 35px;
+}
+/* 必填项 */
+.must{
+	color:#3A87AD;
+	margin-left: 5px;
+}
+/* 输入错误提示信息 */
+.error{
+	color: #B94A48;
+	margin-left: 10px;
+}
+.add-btn{
+	margin-left: 140px;
+	margin-top: 20px;
+}
+/* 我的账号 - 当前登录账号页面 */
+.current-user table tr th:nth-child(1){
+	width: 140px;
+}
+.current-user table tr th:nth-child(2){
+	width: 130px;
+}
+.current-user table tr th:nth-child(3){
+	width: 140px;
+}
+.current-user table tr th:nth-child(4){
+	width: 140px;
+}
+.current-user table tr th:nth-child(5){
+	width: 180px;
+}
+/* 三种用户账号表格 */
+.account-table tr th:nth-child(1){
+	width:40px;
+}
+.account-table tr th:nth-child(2){
+	width:130px;
+}
+.account-table tr th:nth-child(3){
+	width:100px;
+}
+.account-table tr th:nth-child(4){
+	width:130px;
+}
+.account-table tr th:nth-child(5){
+	width:130px;
+}
+.account-table tr th:nth-child(6){
+	width:130px;
+}
+.account-table tr th:nth-child(7){
+	width:130px;
+}
+/* 当前位置 */
+.current-side{
+	margin-top: 20px;
+	margin-left: 10px;
+	height: 30px;
+	line-height: 30px;
+}
+/* 个人信息和登录信息 */
+.info-content{
+	margin-left: 10px;
+}
+.current-search{
+	height: 30px;
+	line-height: 30px;
+	margin-bottom: 10px;
+}
+/* 用户个人信息表格、超级管理员登录信息 */
+.user-info-list dt{
+	display: block;
+	float: left;
+	width: 120px;
+	text-align: right;
+	line-height: 35px;
+}
+.user-info-list dd{
+	display: block;
+	float: right;
+	width: 800px;
+	text-align: left;
+	line-height: 35px;
+}
+.user-address{
+	margin: 20px 0 0 10px;
+}
+.user-address p{
+	font-weight: bold;
+}
+.user-address table tr th:nth-child(1){
+	width:40px;
+}
+.user-address table tr th:nth-child(2){
+	width:120px;
+}
+.user-address table tr th:nth-child(3){
+	width:200px;
+}
+.user-address table tr th:nth-child(4){
+	width:120px;
+}
+.user-address table tr th:nth-child(5){
+	width:400px;
+}
+/* 登录信息表格 */
+.login-info-table tr th:nth-child(1){
+	width:40px;
+}
+.login-info-table tr th:nth-child(2){
+	width:200px;
+}
+.login-info-table tr th:nth-child(3){
+	width:200px;
+}
+
+/* 订单模块样式 */
+.order-area{
+	margin-left: 10px;
+}
+.order-table tr th:nth-child(1){
+	width:40px;
+}
+.order-table tr th:nth-child(2){
+	width:100px;
+}
+.order-table tr th:nth-child(3){
+	width:150px;
+}
+.order-table tr th:nth-child(4){
+	width:120px;
+}
+.order-table tr th:nth-child(5){
+	width:230px;
+}
+.order-table tr th:nth-child(6){
+	width:80px;
+}
+.order-table tr th:nth-child(7){
+	width:80px;
+}
+.order-table tr th:nth-child(8){
+	width:80px;
+}
+
+/* 订单详情页面样式 */
+.order-title{
+	margin-left: 10px;
+}
+.order-list{
+	margin-top:20px;
+}
+.order-list ul{
+	list-style-type: none;
+	margin-left: 100px;
+}
+.order-list ul li{
+	line-height: 40px;
+}
+.order-list ul li em{
+	font-style: normal;
+	margin-left: 10px;
+}
+.order-list ul li .btn{
+	margin-left: 30px;
+}
+/* 订单详情表格 */
+.detail-table tr th:nth-child(1){
+	width:40px;
+}
+.detail-table tr th:nth-child(2){
+	width:200px;
+}
+.detail-table tr th:nth-child(3){
+	width:160px;
+}
+.detail-table tr th:nth-child(4){
+	width:260px;
+}
+.detail-table tr th:nth-child(5){
+	width:50px;
+}
+.detail-table tr th:nth-child(6){
+	width:50px;
+}
+
+/* 修改订单状态 */
+.select-state select{
+	outline: none;
+}
+.change{
+	margin-bottom: 50px;
+}
+.change em{
+	font-style: normal;
+}
+.current-change{
+	margin-bottom: 10px;
+}
+.index-state{
+	line-height: 40px;
+}
+
+/* 商品管理 */
+.top-bar{
+	width:100%;
+	height:40px;
+	margin-top: 10px;
+}
+.current-site{
+	float: left;
+	margin-left: 10px;
+	line-height: 40px;
+}
+.input-append{
+	float: right;
+	margin-right: 10px;
+	margin-top: 5px;
+}
+.goods-nav{
+	width:100%;
+	height: 32px;
+	border-top:1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	margin-top: 5px;
+}
+.nav-pills .dropdown a, .nav-pills .dropdown a:hover{
+	-webkit-border-radius:0px;
+	-moz-border-radius:0px;
+	border-radius: 0px;
+}
+/* 书本的表格 */
+.goods-content{
+	margin-left: 10px;
+}
+.goods-content table{
+	margin-top: 5px;
+}
+.goods-content table th:nth-child(1){
+	width:40px;
+}
+.goods-content table th:nth-child(2){
+	width:120px;
+}
+.goods-content table th:nth-child(3){
+	width:165px;
+}
+.goods-content table th:nth-child(4){
+	width:80px;
+}
+.goods-content table th:nth-child(5){
+	width:150px;
+}
+.goods-content table th:nth-child(6){
+	width:110px;
+}
+.goods-content table th:nth-child(7){
+	width:190px;
+}
+.goods-content table th:nth-child(8){
+	width:50px;
+}
+.goods-price, .goods-num{
+	list-style-type: square;
+	list-style-position: inside;
+	margin-left: 0;
+}
+.goods-price li em{
+	font-style: normal;
+}
+.goods-price li{
+	line-height: 30px;
+}
+.goods-num{
+	margin-top: 15px;
+}
+.goods-num .btn{
+	margin-left: 10px;
+}
+.minus, .plus{
+	width:10px;
+	height:10px;
+	display: inline;
+	padding: 0 4px;
+	border: 1px solid #bbb;
+	cursor: pointer;
+}
+.num-input{
+	width:30px;
+	text-align: right;
+}
+.add-goods{
+	float: right;
+	margin-right: 10px;
+	margin-bottom: 5px;
+}
+/* 商品详情 - 书本详情  -  修改书本详情 */
+.goods-details, .details-content{
+	width:930px;
+	margin:0 auto;
+}
+.goods-details dl dt{
+	display: block;
+	float: left;
+	text-align: right;
+	width: 120px;
+	line-height: 30px;
+	font-weight: normal;
+}
+.goods-details dl dd{
+	display: block;
+	width: 790px;
+	float: right;
+	text-align: left;
+	line-height: 30px;
+}
+/* 错误信息提示修改 */
+.sale-star{
+	position: absolute;
+	margin-top: -20px;
+}
+.sale-info{
+	float: left;
+	position: absolute;
+	margin-top: -20px;
+	margin-left: 20px;
+}
+/* 操作按钮 */
+.operate{
+	margin-top: 30px;
+	margin-left: 150px;
+}
+.operate .btn{
+	margin-right: 10px;
+}
+.details-content{
+	margin-top: -30px;
+}
+.details-form dl dt{
+	display: block;
+	float: left;
+	text-align: right;
+	width: 120px;
+	line-height: 35px;
+	font-weight: normal;
+}
+.details-form dl dd{
+	display: block;
+	width: 790px;
+	float: right;
+}
+.details-form dl dd input{
+	float:left;
+	width: 250px;
+	margin-top: -30px;
+	margin-left: 10px;
+}
+.details-form .editor{
+	margin-top: -30px;
+	margin-left: 10px;
+}
+/* 商品上传 */
+.file-input{
+	margin-left: 5px;
+}
+.file-btn{
+	display: inline;
+	margin-top: -10px;
+}
+/* 上传结果信息表格 */
+.upload-info-table tr th:nth-child(1){
+	width:40px;
+}
+.upload-info-table tr th:nth-child(2){
+	width:300px;
+}
+.upload-info-table tr th:nth-child(3){
+	width:300px;
+}
+.all-uploads{
+	margin-bottom: 15px;
+}

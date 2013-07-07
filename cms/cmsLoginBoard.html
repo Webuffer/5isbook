@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>我爱搜书 - 后台管理系统 - 登录注册模块</title>
+	<link href="../css/bootstrap.css" type="text/css" rel="stylesheet">
+	<link href="../css/cms.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+	<div class="header">
+		<div class="login-logo">
+			<img src="../images/login.png" alt="cms-logo">
+	             	</div>
+	</div>
+	<div class="container">
+		<div class="login-operation">
+			<a href="cmsRegistBoard.html">注册账号</a>
+			<span>|</span>
+			<a href="cmsFindPsw.html">找回密码</a>
+		</div>
+		<div class="clear"></div>
+		<form action="#" method="post" name="loginBoard" onsubmit="#" class="form-horizontal">
+			<div class="control-group">
+				<label class="control-label" for="account">邮箱：</label>
+				<div class="controls">
+					<input type="text" id="account" placeholder="邮箱">
+					<span class="error">错误信息提示</span>
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label" for="password">密码：</label>
+				<div class="controls">
+					<input type="text" id="password" placeholder="密码">
+					<span class="error">错误信息提示</span>
+				</div>
+			</div>
+			<div class="control-group">
+				<div class="controls">
+					<label class="checkbox">
+						<input type="checkbox">记住我 
+					</label>
+					<button type="submit" class="btn">登录</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="footer">
+		<p>版权所有 © 2013 BY <a href="#">工作组</a></p>
+	</div>
+</body>
+</html>
